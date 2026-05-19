@@ -1,0 +1,7 @@
+Would you like to
+1: Display Journal
+2: Add New Entry
+3: Edit an Entry
+4: Remove Entery
+5: Save Journel
+6: Exit Journel

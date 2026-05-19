@@ -1,0 +1,7 @@
+Lets start Journeling.
+
+Would you like to
+1: Create New Journel
+2: Load a Journel
+3: Save this Journel
+4: Exit

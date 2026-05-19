@@ -9,3 +9,18 @@ class DW_Job
         Console.WriteLine($"{DW_jobTitle} ({DW_company}) {DW_startYear}-{DW_endYear}");
     }
 }
+
+/*
+public class DW_Job
+{
+    public:
+        string DW_company;
+        string DW_jobTitle;
+        int DW_startYear;
+        int DW_endYear;
+        void toString()
+    {
+        Console.WriteLine($"{DW_jobTitle} ({DW_company}) {DW_startYear}-{DW_endYear}");
+    }
+}
+*/
