@@ -70,7 +70,7 @@ class DW_Journal
 
     bool DW_IndexIsValid(int DW_index)
     {
-        if(0 <= DW_index && DW_index <= DW_book.Count())
+        if(0 <= DW_index && DW_index < DW_book.Count())
         {
             return(true);
         }
