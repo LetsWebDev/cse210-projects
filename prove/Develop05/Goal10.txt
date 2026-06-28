@@ -1,0 +1,4 @@
+9
+CheckListGoal\check\list\2\1\2\4
+EternalGoal\eternal\dw_description\3
+SimpleGoal\simple goal\bob20\20\False
