@@ -46,7 +46,7 @@ class DW_CheckListGoal:DW_Goal
         {
             dw_checkmark = "/";
         }
-        return $"[{dw_checkmark}]{dw_name} ({dw_description}) --- Completion Percentage: {dw_completion}/{dw_target}"; 
+        return $"[{dw_checkmark}] {dw_name} ({dw_description}) --- Completion Percentage: {dw_completion}/{dw_target}"; 
         
     }
 }

@@ -1,0 +1,5 @@
+130
+SimpleGoal\Write a book\100 pages long\100\True
+EternalGoal\clean dishes\make kitchen clean\30
+CheckListGoal\Car Payment\$200 per month\1\10\40\400
+SimpleGoal\cook\hamberger\20\True
