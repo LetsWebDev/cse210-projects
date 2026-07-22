@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Xna.Framework;
 
 //ChatGPT generated
 //ref1: Array_to_Array()
@@ -191,6 +188,7 @@ namespace Project1.Simulation
     {
         static public Shape BuildIt(string str)
         {
+            Console.WriteLine(str);
             //str = "Ellipsoid:3,4,0/1,2,3,4/3,3,3/54554.44/0.11134/true"
             string[] dw_str_array1 = str.Split(':');
             string[] dw_str_array2 = dw_str_array1[1].Split('/');
@@ -284,12 +282,20 @@ namespace Project1.Simulation
             Vector3 dw_dimensions = DW_Convert.Str_to_V3(list[3]);
             Vector2 dw_corner1 = DW_Convert.Str_to_V2(list[4]);
             Vector2 dw_corner2 = DW_Convert.Str_to_V2(list[5]);
-            return new QuadrilateralPrism(dw_position, dw_orentation, dw_pivot, dw_dimensions, dw_corner1, dw_corner2);
+            
+            //return new QuadrilateralPrism(dw_position, dw_orentation, dw_pivot, dw_dimensions, dw_corner1, dw_corner2);
+            return new QuadrilateralPrism(
+            dw_position,
+            dw_orentation,
+            dw_pivot,
+            dw_dimensions,
+            dw_corner1,
+            dw_corner2);
+
         }
 
         static public Laser DW_BuildLaser(List<string> list)
         {
-
             Vector3 dw_position = DW_Convert.Str_to_V3(list[0]);
             Quaternion dw_orentation = DW_Convert.Str_to_Qua(list[1]);
             Vector3 dw_pivot = DW_Convert.Str_to_V3(list[2]);

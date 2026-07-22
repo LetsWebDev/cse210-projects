@@ -1,9 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
-using System.Xml.Linq;
 
 namespace Project1.Simulation
 {
@@ -37,17 +34,25 @@ namespace Project1.Simulation
             }
         }
 
+        public void DW_SetName(string name)
+        {
+            dw_name = name;
+        }
+
+        public void DW_SetID(string ID)
+        {
+            dw_id = ID;
+        }
+
         public void DW_SetSpaceObjectData(string line)
         {
             string[] dw_data_array = line.Split('/');
 
-            dw_name = dw_data_array[0];
-            dw_id = dw_data_array[1];
-            dw_startMass = double.Parse(dw_data_array[2]);
-            dw_startPosition = DW_Convert.Str_to_V3(dw_data_array[3]);
-            dw_startVelocity = DW_Convert.Str_to_V3(dw_data_array[4]);
-            dw_startOrientation = DW_Convert.Str_to_Qua(dw_data_array[5]);
-            dw_startAngularVelocity = DW_Convert.Str_to_V3(dw_data_array[6]);
+            dw_startMass = double.Parse(dw_data_array[0]);
+            dw_startPosition = DW_Convert.Str_to_V3(dw_data_array[1]);
+            dw_startVelocity = DW_Convert.Str_to_V3(dw_data_array[2]);
+            dw_startOrientation = DW_Convert.Str_to_Qua(dw_data_array[3]);
+            dw_startAngularVelocity = DW_Convert.Str_to_V3(dw_data_array[4]);
         }
         public void DW_SetChildren(Dictionary<string,SpaceObject> children)
         {
@@ -85,17 +90,15 @@ namespace Project1.Simulation
         {
             return dw_startAngularVelocity;
         }
-
         public string DW_SpaceObjectDataToString()
         {
             string dw_str = "";
-            dw_str += dw_name + ":";
-            dw_str += dw_id + ":";
-            dw_str += dw_startMass + ":";
-            dw_str += dw_startPosition + ":";
-            dw_str += dw_startVelocity + ":";
-            dw_str += dw_startOrientation + ":";
-            dw_str += dw_startAngularVelocity;
+
+            dw_str += DW_Convert.db_to_Str(dw_startMass) + "/";
+            dw_str += DW_Convert.V3_to_Str(dw_startPosition) + "/";
+            dw_str += DW_Convert.V3_to_Str(dw_startVelocity) + "/";
+            dw_str += DW_Convert.Qua_to_Str(dw_startOrientation) + "/";
+            dw_str += DW_Convert.V3_to_Str(dw_startAngularVelocity);
 
             return dw_str;
         }

@@ -4,20 +4,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Numerics;
 
-using var game = new Project1.Game1();
+//using var game = new Project1.Game1();
 //game.Run();
 
+
 SpaceSimulation simulation = new SpaceSimulation();
-
-simulation.DW_TestManualUniverse();
-//simulation.DW_LoadUniverse();
-
-var universe = simulation.DW_GetUniverse();
-
-foreach (var item in universe)
-{
-    Console.WriteLine(item.Key);
-}
+simulation.DW_LoadUniverse();
+simulation.DW_SaveUniverse();
 
 /*
 double mass = 1;
