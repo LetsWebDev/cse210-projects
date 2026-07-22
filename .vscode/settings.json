@@ -4,5 +4,7 @@
     "plaintext": false,
     "markdown": false,
     "csharp": false
-  }
+  },
+  "terminal.integrated.shellIntegration.quickFixEnabled": true,
+  "terminal.integrated.shellIntegration.enabled": true
 }
